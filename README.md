@@ -8,7 +8,7 @@
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
 [![Aksaray Üniversitesi](https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg)]()
 
-**[📁 Veri Setleri](./data/)** | **[📓 Python Analiz](./notebooks/)** | **[📈 R Analiz (Korelogram)](./rstudio/)** | **[🖼️ Afişi Büyüt](./assets/images/afis.png)**
+**[📁 Veri Setleri](./data/)** | **[📓 Python Analiz](./notebooks/)** | **[📈 R Analiz (Korelogram)](./rstudio/)** | **[🖼️ Afişi Büyüt](https://raw.githubusercontent.com/yusakru/asu-savunma-harcamas--veriGorsel/main/assets/images/afis.png)**
 
 </div>
 
@@ -20,8 +20,8 @@ Bu proje, Aksaray Üniversitesi Veri Görselleştirme dersi kapsamında hazırla
 Aşağıda projemizin özet niteliğindeki akademik afişini inceleyebilirsiniz:
 
 <div align="center">
-  <a href="./assets/images/afis.png">
-    <img src="assets/images/afis.png" alt="Afiş" width="800">
+  <a href="https://raw.githubusercontent.com/yusakru/asu-savunma-harcamas--veriGorsel/main/assets/images/afis.png">
+    <img src="https://raw.githubusercontent.com/yusakru/asu-savunma-harcamas--veriGorsel/main/assets/images/afis.png" alt="Afiş" width="800">
   </a>
   <p><i>Büyütmek için görselin üzerine tıklayın.</i></p>
 </div>
