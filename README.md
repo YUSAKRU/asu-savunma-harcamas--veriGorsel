@@ -1,5 +1,5 @@
 # Ülkeler Savunmaya Ne Kadar Harcıyor? 
-## Küresel Savunma Harcamaları Analizi (2000-2024)
+## Küresel Savunma Harcamaları Analizi (2000-2024) 
 
 ![Afiş](assets/images/poster.png)
 
