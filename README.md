@@ -1,16 +1,19 @@
-<div align="center">
+<h1 align="center">Ülkeler Savunmaya Ne Kadar Harcıyor? 🌍🛡️</h1>
+<h3 align="center">Küresel Savunma Harcamaları Analizi (2000-2024)</h3>
 
-# Ülkeler Savunmaya Ne Kadar Harcıyor? 🌍🛡️
-### Küresel Savunma Harcamaları Analizi (2000-2024)
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python"></a>
+  <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-4.0+-blue.svg" alt="R"></a>
+  <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-Notebook-orange.svg" alt="Jupyter"></a>
+  <img src="https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg" alt="Aksaray Üniversitesi">
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
-[![Aksaray Üniversitesi](https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg)]()
-
-**[📁 Veri Setleri](./data/)** | **[📓 Python Analiz](./notebooks/)** | **[📈 R Analiz (Korelogram)](./rstudio/)** | **[🖼️ Afişi Büyüt](https://raw.githubusercontent.com/yusakru/asu-savunma-harcamas--veriGorsel/main/assets/images/afis.png)**
-
-</div>
+<p align="center">
+  <strong><a href="./data/">📁 Veri Setleri</a></strong> |
+  <strong><a href="./notebooks/">📓 Python Analiz</a></strong> |
+  <strong><a href="./rstudio/">📈 R Analiz (Korelogram)</a></strong> |
+  <strong><a href="assets/images/afis.png">🖼️ Afişi Büyüt</a></strong>
+</p>
 
 ---
 
@@ -20,8 +23,8 @@ Bu proje, Aksaray Üniversitesi Veri Görselleştirme dersi kapsamında hazırla
 Aşağıda projemizin özet niteliğindeki akademik afişini inceleyebilirsiniz:
 
 <div align="center">
-  <a href="https://raw.githubusercontent.com/yusakru/asu-savunma-harcamas--veriGorsel/main/assets/images/afis.png">
-    <img src="https://raw.githubusercontent.com/yusakru/asu-savunma-harcamas--veriGorsel/main/assets/images/afis.png" alt="Afiş" width="800">
+  <a href="assets/images/afis.png">
+    <img src="assets/images/afis.png" alt="Afiş" width="800">
   </a>
   <p><i>Büyütmek için görselin üzerine tıklayın.</i></p>
 </div>
