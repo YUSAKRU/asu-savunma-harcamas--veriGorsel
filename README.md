@@ -4,10 +4,11 @@
 ### Küresel Savunma Harcamaları Analizi (2000-2024)
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![R](https://img.shields.io/badge/R-4.0+-blue.svg)](https://www.r-project.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
 [![Aksaray Üniversitesi](https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg)]()
 
-**[📁 Veri Setleri](./data/)** | **[📓 Analiz ve Kodlar](./notebooks/)** | **[🖼️ Afişi Tam Boyut Görüntüle](./assets/images/poster.png)**
+**[📁 Veri Setleri](./data/)** | **[📓 Python Analiz](./notebooks/)** | **[📈 R Analiz (Korelogram)](./rstudio/)** | **[🖼️ Afişi Büyüt](./assets/images/poster.png)**
 
 </div>
 
@@ -47,16 +48,18 @@ Afişte sunulan çıkarımlara ulaşmak için aşağıdaki güvenilir veri setle
 Projenin mutfağında neler olduğunu görmek için aşağıdaki bağlantıları kullanabilirsiniz:
 
 * **[`📁 /data`](./data/)**: Analizde kullanılan ham (`raw`) ve analize hazır temizlenmiş (`cleaned`) CSV/Excel veri setleri.
-* **[`📁 /notebooks`](./notebooks/)**: Pandas ile yapılan veri manipülasyonları ve Matplotlib/Seaborn/Plotly ile çizdirilen grafiklerin adım adım kodları.
+* **[`📁 /notebooks`](./notebooks/)**: Python (Pandas) ile yapılan veri manipülasyonları ve Matplotlib/Seaborn/Plotly grafikleri.
+* **[`📁 /rstudio`](./rstudio/)**: R dili kullanılarak World Bank API (`WDI`) üzerinden anlık çekilen verilerin işlendiği ve Korelasyon Matrisinin (`corrplot`) çizdirildiği kod dosyaları.
 * **[`📁 /assets/images`](./assets/images/)**: Afişin yüksek çözünürlüklü dijital (PNG/PDF) dosyaları ve ek görseller.
 
 ---
 
 ## 🚀 Teknolojik Altyapı
-- **Programlama:** Python
-- **Veri Manipülasyonu:** `pandas`, `numpy`
-- **Görselleştirme:** `matplotlib`, `seaborn`, `plotly`
-- **Geliştirme Ortamı:** Jupyter Notebook
+- **Programlama Dilleri:** Python, R
+- **Veri Manipülasyonu:** `pandas`, `numpy` (Python), `dplyr`, `tidyr` (R)
+- **Veri Çekme (API):** `WDI` (World Bank - R)
+- **Görselleştirme:** `matplotlib`, `seaborn`, `plotly` (Python), `corrplot` (R)
+- **Geliştirme Ortamları:** Jupyter Notebook, RStudio
 
 ---
 
