@@ -13,7 +13,7 @@ invisible(sapply(packages, function(x) {
 # ============================================================================
 # 1. SIPRI VERİLERİ (GERÇEK)
 # ============================================================================
-dosya_excel <- "/home/yusakru/Desktop/veriGorsel/afis/SIPRI-Milex-data-1949-2024_2.xlsx"
+dosya_excel <- "../data/SIPRI-Milex-data-1949-2024_2.xlsx"
 
 sipri_usd <- read_excel(dosya_excel, sheet = "Current US$", skip = 5, 
                         na = c(". .", "xxx", "", " "))

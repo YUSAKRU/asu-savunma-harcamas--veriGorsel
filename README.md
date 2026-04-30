@@ -2,15 +2,12 @@
 <h3 align="center">Küresel Savunma Harcamaları Analizi (2000-2024)</h3>
 
 <p align="center">
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python"></a>
   <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-4.0+-blue.svg" alt="R"></a>
-  <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-Notebook-orange.svg" alt="Jupyter"></a>
   <img src="https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg" alt="Aksaray Üniversitesi">
 </p>
 
 <p align="center">
   <strong><a href="./data/">📁 Veri Setleri</a></strong> |
-  <strong><a href="./notebooks/">📓 Python Analiz</a></strong> |
   <strong><a href="./rstudio/">📈 R Analiz (Korelogram)</a></strong> |
   <strong><a href="assets/images/afis.png">🖼️ Afişi Büyüt</a></strong>
 </p>
@@ -51,18 +48,17 @@ Afişte sunulan çıkarımlara ulaşmak için aşağıdaki güvenilir veri setle
 Projenin mutfağında neler olduğunu görmek için aşağıdaki bağlantıları kullanabilirsiniz:
 
 * **[`📁 /data`](./data/)**: Analizde kullanılan ham (`raw`) ve analize hazır temizlenmiş (`cleaned`) CSV/Excel veri setleri.
-* **[`📁 /notebooks`](./notebooks/)**: Python (Pandas) ile yapılan veri manipülasyonları ve Matplotlib/Seaborn/Plotly grafikleri.
 * **[`📁 /rstudio`](./rstudio/)**: R dili kullanılarak World Bank API (`WDI`) üzerinden anlık çekilen verilerin işlendiği ve Korelasyon Matrisinin (`corrplot`) çizdirildiği kod dosyaları.
 * **[`📁 /assets/images`](./assets/images/)**: Afişin yüksek çözünürlüklü dijital (PNG/PDF) dosyaları ve ek görseller.
 
 ---
 
 ## 🚀 Teknolojik Altyapı
-- **Programlama Dilleri:** Python, R
-- **Veri Manipülasyonu:** `pandas`, `numpy` (Python), `dplyr`, `tidyr` (R)
-- **Veri Çekme (API):** `WDI` (World Bank - R)
-- **Görselleştirme:** `matplotlib`, `seaborn`, `plotly` (Python), `corrplot` (R)
-- **Geliştirme Ortamları:** Jupyter Notebook, RStudio
+- **Programlama Dilleri:** R
+- **Veri Manipülasyonu:** `dplyr`, `tidyr`
+- **Veri Çekme (API):** `WDI` (World Bank)
+- **Görselleştirme:** `corrplot`
+- **Geliştirme Ortamları:** RStudio
 
 ---
 
