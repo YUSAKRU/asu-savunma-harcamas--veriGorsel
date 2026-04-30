@@ -1,35 +1,72 @@
-# Ülkeler Savunmaya Ne Kadar Harcıyor? 
-## Küresel Savunma Harcamaları Analizi (2000-2024) 
+<div align="center">
 
-![Afiş](assets/images/poster.png)
+# Ülkeler Savunmaya Ne Kadar Harcıyor? 🌍🛡️
+### Küresel Savunma Harcamaları Analizi (2000-2024)
 
-### Proje Özeti
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
+[![Aksaray Üniversitesi](https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg)]()
+
+**[📁 Veri Setleri](./data/)** | **[📓 Analiz ve Kodlar](./notebooks/)** | **[🖼️ Afişi Tam Boyut Görüntüle](./assets/images/poster.png)**
+
+</div>
+
+---
+
+## 📌 Proje Özeti
 Bu proje, Aksaray Üniversitesi Veri Görselleştirme dersi kapsamında hazırlanmıştır. Dünyanın önde gelen askeri güçleri olan ABD, Rusya, Çin, Türkiye, Hindistan gibi ülkelerin 2000-2024 yılları arasındaki savunma harcamalarını, GSYH oranlarını ve bu harcamaların insan gelişimi (eğitim, sağlık vb.) ile olan ilişkisini analiz etmektedir.
 
-### 📊 Veri Kaynakları
+Aşağıda projemizin özet niteliğindeki akademik afişini inceleyebilirsiniz:
 
-Bu projede kullanılan veriler güvenilir uluslararası kuruluşlardan derlenmiştir:
+<div align="center">
+  <a href="./assets/images/poster.png">
+    <img src="assets/images/poster.png" alt="Afiş" width="800">
+  </a>
+  <p><i>Büyütmek için görselin üzerine tıklayın.</i></p>
+</div>
 
-| Veri | Kaynak |
-| :--- | :--- |
-| 🎖️ Askeri Harcama | SIPRI |
-| 💰 GSMH, Nüfus | World Bank |
-| 🏆 İGE (İnsan Geliştirme) | UNDP HDI |
-| 🏥 Sağlık/Eğitim % | World Bank |
+---
 
-### 📂 Proje Yapısı
+## 📊 Veri Kaynakları ve Direkt Linkler
 
-Depo içeriği şu şekilde organize edilmiştir:
+Afişte sunulan çıkarımlara ulaşmak için aşağıdaki güvenilir veri setleri kullanılmıştır:
 
-*   **`data/`**: Analizde kullanılan ham ve temizlenmiş veri setleri.
-*   **`notebooks/`**: Veri ön işleme ve görselleştirme için kullanılan Jupyter Notebook dosyaları.
-*   **`assets/images/`**: Afişin yüksek çözünürlüklü dijital kopyası ve projede kullanılan diğer görseller.
+| Veri Türü | Kaynak Kurum | Direkt Link |
+| :--- | :--- | :--- |
+| 🎖️ **Askeri Harcama Verileri** | SIPRI | [SIPRI Milex Data](https://www.sipri.org/databases/milex) |
+| 💰 **GSMH & Nüfus** | World Bank | [WB Open Data](https://data.worldbank.org/) |
+| 🏆 **İnsani Gelişme Endeksi (İGE)** | UNDP HDI | [HDR Data](https://hdr.undp.org/data-center) |
+| 🏥 **Sağlık & Eğitim Harcamaları (%)** | World Bank | [WB Education/Health](https://data.worldbank.org/) |
 
-### 🚀 Kullanılan Teknolojiler
-- Python (Pandas, Matplotlib, Seaborn, Plotly vb.)
-- Jupyter Notebook
+> *Temizlenmiş verilerin analiz için hazır hallerini **[`/data`](./data/)** klasörümüzde bulabilirsiniz.*
 
-### 👨‍💻 Hazırlayanlar
+---
+
+## 📂 Proje Yapısını Keşfedin
+
+Projenin mutfağında neler olduğunu görmek için aşağıdaki bağlantıları kullanabilirsiniz:
+
+* **[`📁 /data`](./data/)**: Analizde kullanılan ham (`raw`) ve analize hazır temizlenmiş (`cleaned`) CSV/Excel veri setleri.
+* **[`📁 /notebooks`](./notebooks/)**: Pandas ile yapılan veri manipülasyonları ve Matplotlib/Seaborn/Plotly ile çizdirilen grafiklerin adım adım kodları.
+* **[`📁 /assets/images`](./assets/images/)**: Afişin yüksek çözünürlüklü dijital (PNG/PDF) dosyaları ve ek görseller.
+
+---
+
+## 🚀 Teknolojik Altyapı
+- **Programlama:** Python
+- **Veri Manipülasyonu:** `pandas`, `numpy`
+- **Görselleştirme:** `matplotlib`, `seaborn`, `plotly`
+- **Geliştirme Ortamı:** Jupyter Notebook
+
+---
+
+## 👨‍💻 Hazırlayan Takım
 * Kerem Efe YİĞİT
 * Yusuf Selim AKDEMİR
 * Bedirhan ÇAVDAR
+
+---
+<div align="center">
+  <b>Bizi ziyaret ettiğiniz için teşekkürler!</b> Proje dosyalarını detaylı incelemek için doğrudan bağlantıları kullanabilirsiniz.
+</div>
+
