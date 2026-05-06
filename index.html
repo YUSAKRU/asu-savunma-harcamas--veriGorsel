@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aksaray Üniversitesi Veri Görselleştirme — Küresel savunma harcamaları, SIPRI ve Dünya Bankası verileri ile analiz ve görseller.">
+  <title>Küresel Güç Dengesi — Savunma Harcamaları Veri Görselleştirme</title>
+  <style>
+    :root {
+      --bg-deep: #0b1d3a;
+      --bg-card: #ffffff;
+      --text: #1a1a1a;
+      --muted: #5c6b7a;
+      --accent: #1f78b4;
+      --accent-2: #d95f02;
+      --border: #e2e8f0;
+      --radius: 10px;
+      --shadow: 0 8px 30px rgba(11, 29, 58, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: linear-gradient(180deg, #f0f4f8 0%, #fff 35%);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero {
+      background: var(--bg-deep);
+      color: #fff;
+      padding: 2.5rem 1.25rem 3rem;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .hero p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 1rem;
+      max-width: 42rem;
+      margin-inline: auto;
+    }
+    .hero .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+    }
+    section { margin-top: 2.5rem; }
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 1rem;
+      color: var(--bg-deep);
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.35rem;
+      display: inline-block;
+    }
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+    .card img { width: 100%; height: auto; vertical-align: middle; display: block; }
+    .card figcaption {
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1.1rem;
+      background: var(--accent);
+      color: #fff !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none !important;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .btn.secondary { background: var(--accent-2); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .thumb {
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .thumb a { display: block; }
+    .thumb img { width: 100%; height: auto; }
+    .thumb .cap {
+      padding: 0.65rem 0.85rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--bg-deep);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin-top: 0.75rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.65rem 0.75rem;
+      text-align: left;
+    }
+    th { background: #eef4f9; color: var(--bg-deep); }
+    tr:nth-child(even) td { background: #fafbfc; }
+    .footnotes {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-deep);
+      color: rgba(255,255,255,0.88);
+      font-size: 0.9rem;
+    }
+    footer a { color: #9ecfff; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Küresel Güç Dengesi: Ülkeler Savunmaya Ne Kadar Harcıyor?</h1>
+    <p>Aksaray Üniversitesi Veri Görselleştirme dersi kapsamında SIPRI ve Dünya Bankası verileriyle hazırlanan afiş ve üretilmiş grafikler.</p>
+    <span class="badge">SIPRI · World Bank WDI · Spearman korelasyon (ggcorrplot)</span>
+    <div class="btn-row">
+      <a class="btn" href="assets/images/afis.png" download>Afişi indir (PNG)</a>
+      <a class="btn secondary" href="https://github.com/YUSAKRU/asu-savunma-harcamas--veriGorsel">GitHub deposu</a>
+      <a class="btn secondary" href="korelogram-sunum-rehberi.md">Korelogram sunum rehberi (Markdown)</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="poster-title">
+      <h2 id="poster-title">Dijital afiş</h2>
+      <figure class="card">
+        <a href="assets/images/afis.png" title="Tam boyut">
+          <img src="assets/images/afis.png" alt="Veri Görselleştirme posteri: savunma harcamaları ve görseller">
+        </a>
+        <figcaption>Tam çözünürlük için görsele tıklayın veya yukarıdan indirin.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="charts-title">
+      <h2 id="charts-title">Afişte kullanılan ve analiz çıktıları</h2>
+      <p class="footnotes">Bu görseller depodaki <code>rstudio/</code> betikleriyle üretilmiştir; sayfada gösterilen kopyalar <code>assets/images/charts/</code> altındadır.</p>
+      <div class="grid">
+        <div class="thumb">
+          <a href="assets/images/charts/cubuk_askeri_personel.png"><img src="assets/images/charts/cubuk_askeri_personel.png" alt="En büyük 10 askeri güç çubuk grafiği"></a>
+          <div class="cap">Çubuk — aktif askeri personel (GFP 2024)</div>
+        </div>
+        <div class="thumb">
+          <a href="assets/images/charts/boxplot_savunma.png"><img src="assets/images/charts/boxplot_savunma.png" alt="Savunma harcaması boxplot"></a>
+          <div class="cap">Boxplot — seçili ülkeler (SIPRI, 2000–2024)</div>
+        </div>
+        <div class="thumb">
+          <a href="assets/images/charts/sipri_dumbbell_2014_2022.png"><img src="assets/images/charts/sipri_dumbbell_2014_2022.png" alt="Dumbbell 2014 vs 2022 GSYH payı"></a>
+          <div class="cap">Sıçrama — savunma % GSYH, 2014 → 2022</div>
+        </div>
+        <div class="thumb">
+          <a href="assets/images/charts/dumbbell_savunma_sicramas.png"><img src="assets/images/charts/dumbbell_savunma_sicramas.png" alt="Dumbbell 2014 vs 2024 GSYH payı"></a>
+          <div class="cap">Sıçrama — savunma % GSYH, 2014 → 2024</div>
+        </div>
+        <div class="thumb">
+          <a href="assets/images/charts/korelogram_8v_tum.png"><img src="assets/images/charts/korelogram_8v_tum.png" alt="Korelogram tüm değerler"></a>
+          <div class="cap">Korelogram — tüm Spearman değerleri</div>
+        </div>
+        <div class="thumb">
+          <a href="assets/images/charts/korelogram_8v_secici.png"><img src="assets/images/charts/korelogram_8v_secici.png" alt="Korelogram yalnızca anlamlı"></a>
+          <div class="cap">Korelogram — yalnızca p &lt; 0.05</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="data-title">
+      <h2 id="data-title">Veri kaynakları</h2>
+      <table>
+        <thead>
+          <tr><th>Veri</th><th>Kurum</th><th>Bağlantı</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Askeri harcama (Milex)</td>
+            <td>SIPRI</td>
+            <td><a href="https://www.sipri.org/databases/milex">sipri.org/databases/milex</a></td>
+          </tr>
+          <tr>
+            <td>GSYH, sağlık/eğitim % GSYH, yaşam beklentisi</td>
+            <td>World Bank (WDI)</td>
+            <td><a href="https://data.worldbank.org/">data.worldbank.org</a></td>
+          </tr>
+          <tr>
+            <td>Aktif personel sıralaması (afiş çubuğu)</td>
+            <td>Global Firepower</td>
+            <td><a href="https://www.globalfirepower.com/">globalfirepower.com</a></td>
+          </tr>
+          <tr>
+            <td>İGE (afişte varsa)</td>
+            <td>UNDP HDI</td>
+            <td><a href="https://hdr.undp.org/data-center">hdr.undp.org</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnotes">Depoda analiz için kullanılan SIPRI Excel dosyası: <a href="data/SIPRI-Milex-data-1949-2024_2.xlsx"><code>data/SIPRI-Milex-data-1949-2024_2.xlsx</code></a></p>
+    </section>
+
+    <section aria-labelledby="code-title">
+      <h2 id="code-title">Kod ve metodoloji</h2>
+      <ul>
+        <li><strong>Güncel korelogram:</strong> <a href="rstudio/korelogram_8degisken.r"><code>rstudio/korelogram_8degisken.r</code></a> — SIPRI 2022 + WDI (2018–2022 penceresi, ülke başına en güncel gözlem), Spearman, <code>ggcorrplot</code>, çıktılar <code>assets/images/charts/</code>.</li>
+        <li><strong>Örnek (eski, 5 ülke):</strong> <a href="rstudio/korelagram.r"><code>rstudio/korelagram.r</code></a> — <code>corrplot</code>; tarihsel referans için duruyor.</li>
+      </ul>
+      <p class="footnotes">Sunum ve soru-cevap metni: <a href="korelogram-sunum-rehberi.md"><code>korelogram-sunum-rehberi.md</code></a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Veri Görselleştirme Dersi</strong> · Danışman: Doç. Dr. Volkan Soner Özsoy</p>
+    <p>Hazırlayanlar: Kerem Efe Yiğit · Bedirhan Çavdar · Yusuf Selim Akdemir</p>
+    <p><a href="https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/">GitHub Pages</a> · <a href="https://github.com/YUSAKRU/asu-savunma-harcamas--veriGorsel">Kaynak kodu</a></p>
+  </footer>
+</body>
+</html>

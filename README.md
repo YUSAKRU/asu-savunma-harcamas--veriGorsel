@@ -1,74 +1,95 @@
-<h1 align="center">Ülkeler Savunmaya Ne Kadar Harcıyor? 🌍🛡️</h1>
-<h3 align="center">Küresel Savunma Harcamaları Analizi (2000-2024)</h3>
+<h1 align="center">Küresel Güç Dengesi: Savunma Harcamaları Veri Görselleştirme</h1>
 
 <p align="center">
-  <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-4.0+-blue.svg" alt="R"></a>
-  <img src="https://img.shields.io/badge/Aksaray_Üniversitesi-Veri_Görselleştirme-red.svg" alt="Aksaray Üniversitesi">
+  <strong>Aksaray Üniversitesi · Veri Görselleştirme Dersi</strong><br>
+  Danışman: Doç. Dr. Volkan Soner Özsoy
 </p>
 
 <p align="center">
-  <strong><a href="./data/">📁 Veri Setleri</a></strong> |
-  <strong><a href="./rstudio/">📈 R Analiz (Korelogram)</a></strong> |
-  <strong><a href="assets/images/afis.png">🖼️ Afişi Büyüt</a></strong>
+  <a href="https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/"><img src="https://img.shields.io/badge/GitHub_Pages-canlı-blue" alt="GitHub Pages"></a>
+  <a href="https://www.r-project.org/"><img src="https://img.shields.io/badge/R-4.x-green.svg" alt="R"></a>
+  <img src="https://img.shields.io/badge/SIPRI-World_Bank-veri-red.svg" alt="Veri">
+</p>
+
+<p align="center">
+  <a href="https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/"><strong>Siteyi aç (index.html)</strong></a> ·
+  <a href="./assets/images/afis.png"><strong>Afiş (PNG)</strong></a> ·
+  <a href="./korelogram-sunum-rehberi.md"><strong>Korelogram sunum rehberi</strong></a>
 </p>
 
 ---
 
-## 📌 Proje Özeti
-Bu proje, Aksaray Üniversitesi Veri Görselleştirme dersi kapsamında hazırlanmıştır. Dünyanın önde gelen askeri güçleri olan ABD, Rusya, Çin, Türkiye, Hindistan gibi ülkelerin 2000-2024 yılları arasındaki savunma harcamalarını, GSYH oranlarını ve bu harcamaların insan gelişimi (eğitim, sağlık vb.) ile olan ilişkisini analiz etmektedir.
+## Özet
 
-Aşağıda projemizin özet niteliğindeki akademik afişini inceleyebilirsiniz:
+Bu depo; SIPRI askeri harcama verileri ile Dünya Bankası (WDI) sosyoekonomik göstergelerini birleştiren **güncel korelogram analizini** (`ggcorrplot`, Spearman), afişte yer alan **çubuk, boxplot, sıçrama (dumbbell)** ve diğer çıktıları ve **güncel afiş görselini** içerir.
 
-<div align="center">
-  <a href="assets/images/afis.png">
-    <img src="assets/images/afis.png" alt="Afiş" width="800">
+**Canlı sayfa:** https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/
+
+> GitHub Pages için: Repository **Settings → Pages** bölümünde kaynak olarak `main` / root (`/`) seçildiğinden emin olun. Statik site kök dosyası [`index.html`](./index.html) olmalıdır.
+
+---
+
+## Dijital afiş
+
+<p align="center">
+  <a href="./assets/images/afis.png">
+    <img src="./assets/images/afis.png" alt="Veri Görselleştirme Posteri" width="820">
   </a>
-  <p><i>Büyütmek için görselin üzerine tıklayın.</i></p>
-</div>
+</p>
 
 ---
 
-## 📊 Veri Kaynakları ve Direkt Linkler
+## Üretilmiş grafikler
 
-Afişte sunulan çıkarımlara ulaşmak için aşağıdaki güvenilir veri setleri kullanılmıştır:
+Tümü [`assets/images/charts/`](./assets/images/charts/) altında:
 
-| Veri Türü | Kaynak Kurum | Direkt Link |
-| :--- | :--- | :--- |
-| 🎖️ **Askeri Harcama Verileri** | SIPRI | [SIPRI Milex Data](https://www.sipri.org/databases/milex) |
-| 💰 **GSMH & Nüfus** | World Bank | [WB Open Data](https://data.worldbank.org/) |
-| 🏆 **İnsani Gelişme Endeksi (İGE)** | UNDP HDI | [HDR Data](https://hdr.undp.org/data-center) |
-| 🏥 **Sağlık & Eğitim Harcamaları (%)** | World Bank | [WB Education/Health](https://data.worldbank.org/) |
-
-> *Temizlenmiş verilerin analiz için hazır hallerini **[`/data`](./data/)** klasörümüzde bulabilirsiniz.*
-
----
-
-## 📂 Proje Yapısını Keşfedin
-
-Projenin mutfağında neler olduğunu görmek için aşağıdaki bağlantıları kullanabilirsiniz:
-
-* **[`📁 /data`](./data/)**: Analizde kullanılan ham (`raw`) ve analize hazır temizlenmiş (`cleaned`) CSV/Excel veri setleri.
-* **[`📁 /rstudio`](./rstudio/)**: R dili kullanılarak World Bank API (`WDI`) üzerinden anlık çekilen verilerin işlendiği ve Korelasyon Matrisinin (`corrplot`) çizdirildiği kod dosyaları.
-* **[`📁 /assets/images`](./assets/images/)**: Afişin yüksek çözünürlüklü dijital (PNG/PDF) dosyaları ve ek görseller.
+| Dosya | Açıklama |
+| :--- | :--- |
+| `cubuk_askeri_personel.png` | En büyük 10 askeri güç (GFP 2024) |
+| `boxplot_savunma.png` | Seçili ülkeler savunma harcaması dağılımı (SIPRI, 2000–2024) |
+| `sipri_dumbbell_2014_2022.png` | Savunma % GSYH sıçraması 2014 → 2022 |
+| `dumbbell_savunma_sicramas.png` | Savunma % GSYH sıçraması 2014 → 2024 |
+| `korelogram_8v_tum.png` | Korelogram — tüm korelasyon değerleri |
+| `korelogram_8v_secici.png` | Korelogram — yalnızca p < 0.05 |
 
 ---
 
-## 🚀 Teknolojik Altyapı
-- **Programlama Dilleri:** R
-- **Veri Manipülasyonu:** `dplyr`, `tidyr`
-- **Veri Çekme (API):** `WDI` (World Bank)
-- **Görselleştirme:** `corrplot`
-- **Geliştirme Ortamları:** RStudio
+## Veri
+
+| Konum | İçerik |
+| :--- | :--- |
+| [`data/SIPRI-Milex-data-1949-2024_2.xlsx`](./data/SIPRI-Milex-data-1949-2024_2.xlsx) | SIPRI Milex (analizde kullanılan sürüm) |
+
+Ek göstergeler **World Bank WDI** üzerinden betik içinde çekilir (`WDI` R paketi).
 
 ---
 
-## 👨‍💻 Hazırlayan Takım
-* Kerem Efe YİĞİT
-* Yusuf Selim AKDEMİR
-* Bedirhan ÇAVDAR
+## R betikleri
+
+| Dosya | Açıklama |
+| :--- | :--- |
+| [**`rstudio/korelogram_8degisken.r`**](./rstudio/korelogram_8degisken.r) | **Güncel ana analiz:** ~40 ülke, SIPRI 2022 + WDI, Spearman, iki PNG çıktısı → `assets/images/charts/` |
+| [`rstudio/korelagram.r`](./rstudio/korelagram.r) | Eski örnek (5 ülke, `corrplot`) — referans |
+
+Çalıştırma: RStudio’da çalışma dizinini `rstudio/` yapın; veri yolu `../data/...` olarak ayarlıdır.
 
 ---
+
+## Metodoloji özeti
+
+- **Korelogram:** Spearman sıra korelasyonu; anlamlılık için `p < 0.05` sürümü ayrı PNG olarak üretilir.
+- **Değişkenler:** Savunma (% GSYH, kişi başı log, bütçe payı), sağlık/eğitim (% GSYH), kişi başı GSYH (log), yaşam beklentisi (ayrıntı için `korelogram-sunum-rehberi.md`).
+
+---
+
+## Hazırlayanlar
+
+- Kerem Efe Yiğit  
+- Bedirhan Çavdar  
+- Yusuf Selim Akdemir  
+
+---
+
 <div align="center">
-  <b>Bizi ziyaret ettiğiniz için teşekkürler!</b> Proje dosyalarını detaylı incelemek için doğrudan bağlantıları kullanabilirsiniz.
+  <sub>Son güncelleme: afiş ve grafikler proje klasörü ile senkronize edilmiştir.</sub>
 </div>
-
