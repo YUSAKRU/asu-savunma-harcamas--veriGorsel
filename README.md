@@ -13,8 +13,7 @@
 
 <p align="center">
   <a href="https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/"><strong>Siteyi aç (index.html)</strong></a> ·
-  <a href="./assets/images/afis.png"><strong>Afiş (PNG)</strong></a> ·
-  <a href="./korelogram-sunum-rehberi.md"><strong>Korelogram sunum rehberi</strong></a>
+  <a href="./assets/images/afis.png"><strong>Afiş (PNG)</strong></a>
 </p>
 
 ---
@@ -78,7 +77,7 @@ Ek göstergeler **World Bank WDI** üzerinden betik içinde çekilir (`WDI` R pa
 ## Metodoloji özeti
 
 - **Korelogram:** Spearman sıra korelasyonu; anlamlılık için `p < 0.05` sürümü ayrı PNG olarak üretilir.
-- **Değişkenler:** Savunma (% GSYH, kişi başı log, bütçe payı), sağlık/eğitim (% GSYH), kişi başı GSYH (log), yaşam beklentisi (ayrıntı için `korelogram-sunum-rehberi.md`).
+- **Değişkenler:** Savunma (% GSYH, kişi başı log, bütçe payı), sağlık/eğitim (% GSYH), kişi başı GSYH (log), yaşam beklentisi.
 
 ---
 
