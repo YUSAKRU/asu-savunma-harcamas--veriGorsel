@@ -190,12 +190,13 @@ print(round(p_matrisi, 3))
 cat("\n")
 
 # ============================================================================
-# 7. GRAFİK TEMA VE RENK AYARLARI — LIGHT MODE
+# 7. GRAFİK TEMA — ŞEFFAF ARKA PLAN
+# Plot + panel + lejant zeminleri şeffaf; PNG kaydında bg = "transparent".
 # Renk paleti: turuncu (negatif) → beyaz (sıfır) → mavi (pozitif)
 # ============================================================================
 renk_paleti <- c("#D95F02", "#FFFFFF", "#1F78B4")
-ARKA_PLAN   <- "#FFFFFF"
-PANEL_ARKA  <- "#FFFFFF"
+ARKA_PLAN   <- NA
+PANEL_ARKA  <- NA
 YAZI_RENGI  <- "#1A1A1A"
 
 tema_ortak <- function() {
@@ -231,9 +232,8 @@ tema_ortak <- function() {
                                         size = 7.5, hjust = 0, margin = margin(t = 10)),
       plot.margin       = margin(22, 20, 14, 18),
       legend.position   = "right",
-      legend.background = element_rect(fill = ARKA_PLAN, color = "grey85",
-                                        linewidth = 0.4),
-      legend.key        = element_rect(fill = ARKA_PLAN, color = NA),
+      legend.background = element_rect(fill = NA, color = NA),
+      legend.key        = element_rect(fill = NA, color = NA),
       legend.title      = element_text(color = YAZI_RENGI, face = "bold", size = 11),
       legend.text       = element_text(color = YAZI_RENGI, size = 10),
       legend.margin     = margin(8, 8, 8, 8)
@@ -303,7 +303,7 @@ grafik_v2 <- ggcorrplot(
 # 10. PNG KAYDET
 # ============================================================================
 kaydet <- function(g, dosya, w = 1600, h = 1350) {
-  png(dosya, width = w, height = h, res = 150)
+  png(dosya, width = w, height = h, res = 150, bg = "transparent")
   print(g)
   dev.off()
   cat("✓ Kaydedildi:", dosya, "\n")
