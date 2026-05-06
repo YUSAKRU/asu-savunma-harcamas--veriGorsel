@@ -20,7 +20,7 @@
 
 ## Özet
 
-Bu depo; SIPRI askeri harcama verileri ile Dünya Bankası (WDI) sosyoekonomik göstergelerini birleştiren **güncel korelogram analizini** (`ggcorrplot`, Spearman), afişte yer alan **çubuk, boxplot, sıçrama (dumbbell)** ve diğer çıktıları ve **güncel afiş görselini** içerir.
+Bu depo; SIPRI askeri harcama verileri ile Dünya Bankası (WDI) sosyoekonomik göstergelerini birleştiren **korelogram analizini** (`ggcorrplot`, Spearman), afişte yer alan **çubuk, boxplot, sıçrama (dumbbell)** ve diğer çıktıları ve **güncel afiş görselini** içerir.
 
 **Canlı sayfa:** https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/
 
@@ -67,8 +67,7 @@ Ek göstergeler **World Bank WDI** üzerinden betik içinde çekilir (`WDI` R pa
 
 | Dosya | Açıklama |
 | :--- | :--- |
-| [**`rstudio/korelogram_8degisken.r`**](./rstudio/korelogram_8degisken.r) | **Güncel ana analiz:** ~40 ülke, SIPRI 2022 + WDI, Spearman, iki PNG çıktısı → `assets/images/charts/` |
-| [`rstudio/korelagram.r`](./rstudio/korelagram.r) | Eski örnek (5 ülke, `corrplot`) — referans |
+| [**`rstudio/korelogram_8degisken.r`**](./rstudio/korelogram_8degisken.r) | Korelogram: ~40 ülke, SIPRI 2022 + WDI, Spearman, iki PNG çıktısı → `assets/images/charts/` |
 
 Çalıştırma: RStudio’da çalışma dizinini `rstudio/` yapın; veri yolu `../data/...` olarak ayarlıdır.
 
