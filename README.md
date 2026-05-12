@@ -82,9 +82,9 @@ Ek göstergeler **World Bank WDI** üzerinden betik içinde çekilir (`WDI` R pa
 
 ## Hazırlayanlar
 
-- Kerem Efe Yiğit  
-- Bedirhan Çavdar  
-- Yusuf Selim Akdemir  
+- **Kerem Efe YİĞİT** - [GitHub](https://github.com/keremefeyigit) | [LinkedIn](https://www.linkedin.com/in/kerem-efe-yi%C4%9Fit/)
+- **Yusuf Selim AKDEMİR** - [GitHub](https://github.com/YUSAKRU) | [LinkedIn](https://www.linkedin.com/in/yusuf-selim-akdemir/)
+- **Bedirhan ÇAVDAR** - [GitHub](https://github.com/Hero-Bedirhan) | [LinkedIn](https://www.linkedin.com/in/bedirhan-%C3%A7avdar-89a513327/)
 
 ---
 
