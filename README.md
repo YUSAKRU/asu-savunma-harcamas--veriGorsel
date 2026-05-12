@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://yusakru.github.io/asu-savunma-harcamas--veriGorsel/"><strong>Siteyi aç (index.html)</strong></a> ·
-  <a href="./assets/images/afis.png"><strong>Afiş (PNG)</strong></a>
+  <a href="./assets/images/Veri%20Görselleştirme%20Posteri.png"><strong>Afiş (PNG)</strong></a>
 </p>
 
 ---
@@ -31,8 +31,8 @@ Bu depo; SIPRI askeri harcama verileri ile Dünya Bankası (WDI) sosyoekonomik g
 ## Dijital afiş
 
 <p align="center">
-  <a href="./assets/images/afis.png">
-    <img src="./assets/images/afis.png" alt="Veri Görselleştirme Posteri" width="820">
+  <a href="./assets/images/Veri%20Görselleştirme%20Posteri.png">
+    <img src="./assets/images/Veri%20Görselleştirme%20Posteri.png" alt="Veri Görselleştirme Posteri" width="820">
   </a>
 </p>
 
